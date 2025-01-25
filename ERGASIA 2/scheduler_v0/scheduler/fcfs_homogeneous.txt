@@ -1,0 +1,32 @@
+process 1833 begins
+process 1833 ends
+process 1834 begins
+process 1834 ends
+process 1835 begins
+process 1835 ends
+process 1836 begins
+process 1836 ends
+process 1837 begins
+process 1837 ends
+PID 1833 - CMD: ../work/work7
+	Elapsed time = 10.90 secs
+	Execution time = 10.89 secs
+	Workload time = 10.90 secs
+PID 1834 - CMD: ../work/work7
+	Elapsed time = 10.95 secs
+	Execution time = 10.90 secs
+	Workload time = 10.95 secs
+PID 1835 - CMD: ../work/work7
+	Elapsed time = 21.97 secs
+	Execution time = 11.05 secs
+	Workload time = 21.97 secs
+PID 1836 - CMD: ../work/work7
+	Elapsed time = 22.03 secs
+	Execution time = 11.08 secs
+	Workload time = 22.03 secs
+PID 1837 - CMD: ../work/work7
+	Elapsed time = 32.94 secs
+	Execution time = 10.95 secs
+	Workload time = 32.94 secs
+WORKLOAD TIME: 32.94 secs
+scheduler exits

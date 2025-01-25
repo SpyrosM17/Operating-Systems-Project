@@ -1,0 +1,44 @@
+process 1840 begins
+process 1840 ends
+process 1839 begins
+process 1839 ends
+process 1843 begins
+process 1843 ends
+process 1842 begins
+process 1842 ends
+process 1841 begins
+process 1841 ends
+process 1844 begins
+process 1844 ends
+process 1845 begins
+process 1845 ends
+PID 1840 - CMD: ../work/work6
+	Elapsed time = 9.52 secs
+	Execution time = 9.40 secs
+	Workload time = 9.52 secs
+PID 1839 - CMD: ../work/work7
+	Elapsed time = 11.00 secs
+	Execution time = 11.00 secs
+	Workload time = 11.00 secs
+PID 1843 - CMD: ../work/work1
+	Elapsed time = 12.69 secs
+	Execution time = 1.66 secs
+	Workload time = 12.69 secs
+PID 1842 - CMD: ../work/work3
+	Elapsed time = 14.34 secs
+	Execution time = 4.77 secs
+	Workload time = 14.34 secs
+PID 1841 - CMD: ../work/work5
+	Elapsed time = 17.56 secs
+	Execution time = 8.02 secs
+	Workload time = 17.56 secs
+PID 1844 - CMD: ../work/work2
+	Elapsed time = 17.70 secs
+	Execution time = 3.33 secs
+	Workload time = 17.70 secs
+PID 1845 - CMD: ../work/work4
+	Elapsed time = 24.23 secs
+	Execution time = 6.52 secs
+	Workload time = 24.23 secs
+WORKLOAD TIME: 24.24 secs
+scheduler exits
