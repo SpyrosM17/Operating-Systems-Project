@@ -1,44 +1,46 @@
-# Operating Systems Projects 2024-2025
+# Operating Systems Projects
 
-## 🛠 Project 1: Shell Scripting, Συγχρονισμός & Διαχείριση Μνήμης
+## 🛠 Project 1: Shell Scripting, Synchronization & Memory Management
 
-Το πρώτο project χωρίζεται σε τρία βασικά μέρη:
+This project is divided into three core modules:
 
 ### 1. Shell Scripting (`processes_ipc.sh`)
-Ανάπτυξη script για τη διαχείριση δεδομένων επιβατών (από αρχείο `.csv` ή πληκτρολόγιο).
-- Αναζήτηση και φιλτράρισμα στοιχείων (case-insensitive).
-- Δυνατότητα αλλαγής στοιχείων βάσει κωδικού ή ονόματος.
-- Παραγωγή στατιστικών αναφορών (ηλικιακές ομάδες, ποσοστά διάσωσης, μέση ηλικία πληρώματος/επιβατών).
+Development of an automated script for managing passenger data (via `.csv` files or manual input).
+* **Search & Filter:** Advanced data retrieval with case-insensitive filtering.
+* **Data Manipulation:** Update records based on unique IDs or names.
+* **Statistical Reporting:** Generation of reports including age demographics, survival rates, and average age of crew vs. passengers using `awk`, `sed`, and `grep`.
 
-### 2. Συγχρονισμός Διεργασιών με Σημαφόρους
-Προσομοίωση εγκατάλειψης πλοίου και επιβίβασης σε λέμβους.
-- **Υλοποίηση:** Windows API (`winbase.h`).
-- **Λειτουργία:** Χρήση σημαφόρων για τον έλεγχο της χωρητικότητας των λέμβων και τον συγχρονισμό των διεργασιών των επιβατών.
+### 2. Process Synchronization with Semaphores
+A simulation of a ship evacuation and lifeboat boarding procedure.
+* **Implementation:** Windows API (`winbase.h`).
+* **Logic:** Utilizing semaphores to manage lifeboat capacity and synchronize passenger processes to prevent race conditions.
 
-### 3. Χρονοπρογραμματισμός & Διαχείριση Μνήμης
-Προσομοιωτής που συνδυάζει:
-- **Αλγόριθμος:** Round Robin (RR) με κβάντο χρόνου 3ms.
-- **Μνήμη:** Στατική κατανομή (512 KB συνολικά) με διαχωρισμό blocks (splitting) κατά την εκχώρηση και αποδέσμευση κατά την ολοκλήρωση.
+### 3. Scheduling & Memory Management
+A custom simulator that combines CPU scheduling and memory allocation:
+* **Algorithm:** Round Robin (RR) with a 3ms time quantum.
+* **Memory:** Static allocation (512 KB total) featuring block splitting during allocation and deallocation upon process completion.
 
 ---
 
 ## ⚙️ Project 2: Multi-Processor Scheduling
 
-Εστίαση στην τροποποίηση ενός scheduler για την υποστήριξη συστημάτων με πολλαπλούς επεξεργαστές.
+This project focuses on modifying a kernel-level scheduler to support multi-processor architectures.
 
-### Α' Φάση: FCFS σε Multi-Processor Περιβάλλον
-- Εισαγωγή μεταβλητών για `total_processors` και `available_processors`.
-- Τροποποίηση του αλγορίθμου **FCFS** ώστε να εκτελεί ταυτόχρονα όσες διεργασίες επιτρέπουν οι διαθέσιμοι επεξεργαστές.
-- Χρήση `waitpid` με `WNOHANG` για non-blocking έλεγχο ολοκλήρωσης.
+### Phase A: FCFS in a Multi-Processor Environment
+* **Resource Management:** Introduced variables for `total_processors` and `available_processors`.
+* **Parallel Execution:** Modified the **First-Come, First-Served (FCFS)** algorithm to execute multiple processes simultaneously based on available CPU cores.
+* **Process Tracking:** Implemented `waitpid` with the `WNOHANG` flag for non-blocking status checks.
 
-### Β' Φάση: Process-Specific Processor Requirements
-- Κάθε διεργασία αιτείται συγκεκριμένο αριθμό επεξεργαστών (`processors_required`).
-- Ο δρομολογητής ελέγχει αν οι διαθέσιμοι επεξεργαστές επαρκούν. 
-- **Μηχανισμός Αναμονής:** Αν οι πόροι δεν επαρκούν, η διεργασία μεταφέρεται στο τέλος της ουράς (Ready Queue) για να μην μπλοκάρει το σύστημα.
+### Phase B: Process-Specific Processor Requirements
+* **Requirement Analysis:** Each process requests a specific number of cores (`processors_required`).
+* **Resource Validation:** The scheduler dynamically checks if the available hardware meets the process demands.
+* **Queue Management:** If resources are insufficient, the process is moved to the end of the Ready Queue (non-blocking) to optimize system throughput and prevent starvation.
 
 ---
 
-## 💻 Τεχνολογίες & Εργαλεία
-* **Γλώσσες:** C, Bash Scripting
-* **Εργαλεία:** Linux Commands (sed, awk, grep), GCC Compiler, Windows API
-* **Λειτουργικά Συστήματα:** Linux (για Shell Scripting), Windows (για Σημαφόρους/API)
+## 💻 Technologies & Tools
+* **Languages:** C, Bash Scripting.
+* **Command Line:** Linux Utilities (`sed`, `awk`, `grep`).
+* **Compilers:** GCC.
+* **APIs:** Windows API (for synchronization primitives).
+* **Operating Systems:** Linux (Shell & Scheduling), Windows (Semaphores).
